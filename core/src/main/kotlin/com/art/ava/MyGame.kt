@@ -1,8 +1,6 @@
 package com.art.ava
 
-import com.art.ava.screen.FirstScreen
-import com.art.ava.screen.MyGameScreen
-import com.art.ava.screen.SecondScreen
+import com.art.ava.screen.GameScreen
 import com.badlogic.ashley.core.Engine
 import com.badlogic.ashley.core.PooledEngine
 import com.badlogic.gdx.graphics.g2d.Batch
@@ -15,8 +13,8 @@ class MyGame : KtxGame<KtxScreen>() {
     val engine: Engine by lazy { PooledEngine() }
 
     override fun create() {
-        addScreen(FirstScreen(this))
-        setScreen<FirstScreen>()
+        addScreen(GameScreen(this))
+        setScreen<GameScreen>()
     }
 
     override fun dispose() {
